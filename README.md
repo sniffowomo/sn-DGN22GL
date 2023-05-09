@@ -1,5 +1,5 @@
-<h1 align="center"><code>👩‍💼:sn-DGN22GL</code></h1>
-<h2 align="center"><i> GL work continue </i></h2>
+<h1 align="center"><code>👩‍💼: b1</code></h1>
+<h2 align="center"><i> 1st attempt branch </i></h2>
 
 ----
 1. [W ?](#w-)
