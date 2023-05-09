@@ -55,7 +55,7 @@ const people = [
 
 export default function E2() {
   return (
-    <ul role="list" className="bg-sky-500 divide-y divide-gray-100">
+    <ul role="list" className="bg-green-950 divide-y divide-gray-100">
       {people.map((person) => (
         <li key={person.email} className="flex justify-between gap-x-6 py-5">
           <div className="flex gap-x-4">
