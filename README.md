@@ -27,3 +27,5 @@ pnpx create-next-app@latest
 
 > Work wll be done in branches 
 
+# Work Directries
+
