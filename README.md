@@ -9,7 +9,7 @@
 # W ?
 
 Continuation of 
-[`https://gitlab.com/sniffowomo/sn-dgn2-2`](https://gitlab.com/sniffowomo/sn-dgn2-2)
+[`sh`](https://gitlab.com/sniffowomo/sn-dgn2-2)
 - Test use
 
 
