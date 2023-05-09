@@ -29,3 +29,10 @@ pnpx create-next-app@latest
 
 # Work Directries
 
+Work is being done on this 
+
+[Main Playlist](https://www.youtube.com/playlist?list=PL0Zuz27SZ-6Pk-QJIdGd1tGZEzy9RTgtj)
+
+[ How to Build a REST API with Next.js 13 ](https://youtu.be/-MFiza7ZRzs)
+- [`w1`](./w1/) - Work Dir 
+
