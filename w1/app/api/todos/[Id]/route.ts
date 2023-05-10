@@ -12,4 +12,6 @@ export async function GET(request: Request) {
   if (!todos.id) return NextResponse.json({ message: "🥊 F O" })
 
   return NextResponse.json(todos)
+
+  return NextResponse.json(todo)
 }
