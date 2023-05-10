@@ -7,11 +7,9 @@ export async function GET(request: Request) {
 
   const res = await fetch(`${DATA_SOURCE_URL}/${id}`)
 
-  const todos: Todo = await res.json()
+  const todo: Todo = await res.json()
 
-  if (!todos.id) return NextResponse.json({ message: "🥊 F O" })
-
-  return NextResponse.json(todos)
+  if (!todo.id) return NextResponse.json({ message: "🥊 F O" })
 
   return NextResponse.json(todo)
 }
