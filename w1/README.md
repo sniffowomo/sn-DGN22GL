@@ -5,6 +5,7 @@
 1. [What ?](#what-)
    1. [Source Work](#source-work)
 2. [Special Note](#special-note)
+3. [Note](#note)
 
 ----
 
@@ -20,7 +21,9 @@ Main working directory for
 
 > To prevent the F TS server from crashing open the main folder directly in codepaces, and it will work without issues 
 
+# Note 
 
+> This project works completely, the backed rest api has not been deployed, only the FE stuff has been deployed 
 
 
 
