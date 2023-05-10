@@ -1,1 +1,6 @@
-type todo = [userId: number, id: number, title: string, completed: boolean]
+type Todo = {
+  userId: number
+  id: number
+  title: string
+  completeted: boolean
+}
