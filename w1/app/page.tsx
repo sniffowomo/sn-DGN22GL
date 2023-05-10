@@ -7,6 +7,14 @@ export default function Home() {
     <main className="grid grid-cols-1 gap-5 text-center container mx-auto">
       <h1 className="text-5xl text-fuchsia-700">Whatup Ma Homie</h1>
       <h2> YoHoHo </h2>
+
+      <Image
+        src={"https://i.imgur.com/YvkYrkj.jpeg"}
+        alt={"yo"}
+        width={200}
+        height={200}
+      ></Image>
+
       <p className="bg-amber-800 font-extrabold">
         This is going to be just a test of shit <br /> And yet we will see what
         is happening <br /> This project is for testing out the
