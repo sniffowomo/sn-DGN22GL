@@ -10,7 +10,24 @@ export default function Home() {
         This is going to be just a test of shit <br /> And yet we will see what
         is happening <br /> This project is for testing out the
       </p>
-      <E2 />
+      <div className="flex">
+        <div className="flex-none ...">
+          <p className="bg-amber-800 font-extrabold">
+            This is going to be just a test of shit <br /> And yet we will see
+            what is happening <br /> This project is for testing out the
+          </p>
+          01
+        </div>
+        <div className="flex-auto w-64 ...">
+          <E2 />
+        </div>
+        <div className="flex-1 w-32 ...">
+          <p className="bg-teal-600 font-extrabold">
+            This is going to be just a test of shit <br /> And yet we will see
+            what is happening <br /> This project is for testing out the
+          </p>
+        </div>
+      </div>
     </main>
   )
 }
