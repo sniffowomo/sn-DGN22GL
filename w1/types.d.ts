@@ -2,5 +2,5 @@ type Todo = {
   userId: number
   id: number
   title: string
-  completeted: boolean
+  completed: boolean
 }
