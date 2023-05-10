@@ -11,7 +11,7 @@ export default function Home() {
         <Image
           src={"https://i.imgur.com/YvkYrkj.jpeg"}
           alt={"yo"}
-          width={500}
+          width={500} 
           height={200}
         ></Image>
       </div>
