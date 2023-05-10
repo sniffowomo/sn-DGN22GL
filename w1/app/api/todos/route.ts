@@ -16,7 +16,7 @@ export async function DELETE(request: Request) {
 
   if (!id) return NextResponse.json({ message: `${id} Wrong 😡` })
 
-  await fetch(`${DATA_SOURCE_URL}`, {
+  await fetch(`${DATA_SOURCE_URL}/${id}`, {
     method: `DELETE`,
     headers: {
       "Content-Type": "application/json",
@@ -51,4 +51,30 @@ export async function POST(request: Request) {
   const newTodo: Todo = await res.json()
 
   return NextResponse.json(newTodo)
+}
+
+export async function PUT(request: Request) {
+  const { userId, id, title, completed }: Todo = await request.json()
+
+  if (!userId || !id || !title || typeof completed !== "boolean")
+    return NextResponse.json({
+      message: `${userId} or ${title} Missing Bastard😡`,
+    })
+
+  const res = await fetch(`${DATA_SOURCE_URL}/${id}`, {
+    method: `PUT`,
+    headers: {
+      "Content-Type": "application/json",
+      "API-KEY": API_KEY,
+    },
+    body: JSON.stringify({
+      userId,
+      title,
+      completed,
+    }),
+  })
+
+  const updatedTodo: Todo = await res.json()
+
+  return NextResponse.json(updatedTodo)
 }
