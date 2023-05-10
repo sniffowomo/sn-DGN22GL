@@ -56,7 +56,7 @@ export async function POST(request: Request) {
 export async function PUT(request: Request) {
   const { userId, id, title, completed }: Todo = await request.json()
 
-  if (!userId || !id || !title || typeof completed !== "boolean")
+  if (!userId || !id || !title || typeof(completed) !== "boolean")
     return NextResponse.json({
       message: `${userId} or ${title} Missing Bastard😡`,
     })
