@@ -1,31 +1,16 @@
-# Installation of starship with nushell
 
-Step 1
+# Starship Config for NuShell
 
-```rs
-hx $nu.env-path
-```
+[`https://starship.rs/guide/#%F0%9F%9A%80-installation`](https://starship.rs/guide/#%F0%9F%9A%80-installation)
 
-then add
+Add the following to the end of your `Nushell env file` (find it by running $nu.env-path in Nushell):
 
 ```rs
 mkdir ~/.cache/starship
-starship init nu | save ~/.cache/starship/init.nu
+starship init nu | save -f ~/.cache/starship/init.nu
 ```
+And add the following to the end of your Nushell configuration (find it by running $nu.config-path):
 
-After doing this we have to make sure that it gets sourced by nushell.
+source ~/.cache/starship/init.nu
 
-Step 2
 
-```rs
-hx $nu.config-path
-```
-
-Then
-
-```rs
-starship preset pure-preset > ~/.config/starship.toml
-```
-
-- Some times there can be problems with this method.
-- So dont add it , and just source it every time
