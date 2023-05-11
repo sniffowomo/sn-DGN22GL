@@ -1,5 +1,5 @@
-<h1 align="center"><code>👩‍💼: w1 </code></h1>
-<h2 align="center"><i> Main branch  </i></h2>
+<h1 align="center"><code>👩‍💼: w2 </code></h1>
+<h2 align="center"><i> Work derived from w1  </i></h2>
 
 ----
 1. [What ?](#what-)
