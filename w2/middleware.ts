@@ -2,6 +2,7 @@ import { NextResponse } from "next/server"
 
 export function middleware(request: Request) {
   // The following is a secondary method of isolating the api routes
+  // See the next09 about other options    
 
   console.log("Middleware!")
 
