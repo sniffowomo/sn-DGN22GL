@@ -1,9 +1,27 @@
 import { NextResponse } from "next/server"
+import { limiter } from "../config/limiter"
 
 const DATA_SOURCE_URL = "https://jsonplaceholder.typicode.com/todos"
 const API_KEY: string = process.env.DATA_API_KEY as string
 
-export async function GET() {
+export async function GET(request: Request) {
+  // ---- Rate limiting code ----
+  const origin = request.headers.get("origin")
+  const remaining = await limiter.removeTokens(1)
+  console.log("remaining: ", remaining)
+
+  if (remaining < 0) {
+    return new NextResponse(null, {
+      status: 429,
+      statusText: "Bastard Stop",
+      headers: {
+        "Access-Control-Allow-Origin": origin || "*",
+        "Content-type": "text/plain",
+      },
+    })
+  }
+  // ----- Rate Limiter code ------
+
   const res = await fetch(DATA_SOURCE_URL)
 
   const todos: Todo[] = await res.json()
@@ -12,6 +30,23 @@ export async function GET() {
 }
 
 export async function DELETE(request: Request) {
+  // ---- Rate limiting code ----
+  const origin = request.headers.get("origin")
+  const remaining = await limiter.removeTokens(1)
+  console.log("remaining: ", remaining)
+
+  if (remaining < 0) {
+    return new NextResponse(null, {
+      status: 429,
+      statusText: "Bastard Stop",
+      headers: {
+        "Access-Control-Allow-Origin": origin || "*",
+        "Content-type": "text/plain",
+      },
+    })
+  }
+  // ----- Rate Limiter code ------
+
   const { id }: Partial<Todo> = await request.json()
 
   if (!id) return NextResponse.json({ message: `${id} Wrong 😡` })
@@ -28,6 +63,23 @@ export async function DELETE(request: Request) {
 }
 
 export async function POST(request: Request) {
+  // ---- Rate limiting code ----
+  const origin = request.headers.get("origin")
+  const remaining = await limiter.removeTokens(1)
+  console.log("remaining: ", remaining)
+
+  if (remaining < 0) {
+    return new NextResponse(null, {
+      status: 429,
+      statusText: "Bastard Stop",
+      headers: {
+        "Access-Control-Allow-Origin": origin || "*",
+        "Content-type": "text/plain",
+      },
+    })
+  }
+  // ----- Rate Limiter code ------
+
   const { userId, title }: Partial<Todo> = await request.json()
 
   if (!userId || !title)
@@ -54,9 +106,26 @@ export async function POST(request: Request) {
 }
 
 export async function PUT(request: Request) {
+  // ---- Rate limiting code ----
+  const origin = request.headers.get("origin")
+  const remaining = await limiter.removeTokens(1)
+  console.log("remaining: ", remaining)
+
+  if (remaining < 0) {
+    return new NextResponse(null, {
+      status: 429,
+      statusText: "Bastard Stop",
+      headers: {
+        "Access-Control-Allow-Origin": origin || "*",
+        "Content-type": "text/plain",
+      },
+    })
+  }
+  // ----- Rate Limiter code ------
+
   const { userId, id, title, completed }: Todo = await request.json()
 
-  if (!userId || !id || !title || typeof(completed) !== "boolean")
+  if (!userId || !id || !title || typeof completed !== "boolean")
     return NextResponse.json({
       message: `${userId} or ${title} Missing Bastard😡`,
     })
