@@ -5,7 +5,7 @@ const DATA_SOURCE_URL = "https://jsonplaceholder.typicode.com/todos"
 type Props = {
   params: {
     id: string
-  }
+  }  
 }
 
 export async function GET(request: Request, { params: { id } }: Props) {

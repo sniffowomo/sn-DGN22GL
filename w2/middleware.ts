@@ -16,5 +16,6 @@ export function middleware(request: Request) {
 }
 
 export const config = {
+  // This defines the path where the anove middleware code should be used 
   matcher: "/api/:paths*",
 }
