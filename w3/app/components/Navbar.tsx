@@ -30,7 +30,7 @@ export default function Navbar() {
             className="text-white/90 hover:text-white"
             href="https://shorturl.at/hoCQ9"
           >
-            <FaGithub />
+            <FaGithub /> 
           </Link>
           <Link
             className="text-white/90 hover:text-white"
